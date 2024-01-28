@@ -1,0 +1,111 @@
+body{
+    font-size: large;
+}
+#root{
+    width: 130vh;
+    height: 100vh;
+    margin: 0;
+}
+#navbar{
+    display: none;
+}
+#hamburger{
+    display: block;
+}
+.skills{
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: -100px;
+}
+.info{
+    margin-top: -400px;
+}
+.info-with-fixed{
+    margin-top: -400px;
+}
+#projects{
+    margin-left: 70px;
+}
+#about{
+    margin-left: 70px;
+}
+.man-inf-pc{
+    width: 150%;
+    z-index: -1;
+}
+.show-stat{
+    width: 208px;
+    height: 126px;
+    transform: translate(134px, 477px);
+}
+.project-showcase {
+    margin: 115px 92px;
+    flex-direction: column;
+}
+.about-me{
+    margin: 120px 10px;
+}
+.divider{
+    display: none;
+}
+.project-info{
+    margin-top: 60px;
+}
+#price-tracker-bot-pc-info{
+    display: none;
+}
+#price-tracker-bot-mobile-info{
+    display: block;
+}
+#projects{
+    margin-left: 0;
+}
+#project-heading{
+    margin: 10px 65px;
+}
+.socials{
+    margin: 16px 30px;
+}
+.logo{
+    margin: 0px 40px;
+}
+.hamburger-navbar{
+    right: 0;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.47);
+    width: 50%;
+    height: 270vh;
+}
+.hamburger-nav-items{
+    color: #8EA0BA;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+.hamburger-nav-items ul li{
+    list-style: none;
+    margin: 50px 0px;
+}
+.hamburger-nav-items ul{
+    display: flex;
+    flex-direction: column;
+}
+.collapse{
+    color: #8EA0BA;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 30px;
+}
+.about-main{
+    width: 400vw;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-me{
+    margin: 2px 245px;
+}
