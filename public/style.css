@@ -5,6 +5,7 @@ html{
 body{
     background: #0F172A;
     overflow-x: hidden;
+    width: 100%;
 }
 li{
     list-style: none;
