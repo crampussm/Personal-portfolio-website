@@ -105,6 +105,7 @@ body{
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .contact-me{
     margin: 2px 245px;
