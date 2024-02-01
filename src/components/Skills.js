@@ -53,18 +53,18 @@ function Skills(props) {
             <h1 className='heading'>SKILLS</h1>
             <div className="technologies">
                 <div className="row" style={{display: 'flex', flexDirection: 'row'}}>
-                    <div className="techIcons html" onMouseOver={(e)=>{setHover(e)}}><img className='html' src="./images/html-5.png" alt="" /></div>
-                    <div className="techIcons css" onMouseOver={(e)=>{setHover(e)}}><img className='css' src="./images/css-3.png" alt="" /></div>
-                    <div className="techIcons javascript" onMouseOver={(e)=>{setHover(e)}}><img className='javascript' src="./images/js.png" alt="" /></div>
-                    <div className="techIcons nodejs" onMouseOver={(e)=>{setHover(e)}}><img className='nodejs' src="./images/nodejs.png" alt="" /></div>
-                    <div className="techIcons express" onMouseOver={(e)=>{setHover(e)}}><img className='express' src="./images/express.png" alt="" /></div>
+                    <div className="techIcons html" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='html' src="./images/html-5.png" alt="" /></div>
+                    <div className="techIcons css" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='css' src="./images/css-3.png" alt="" /></div>
+                    <div className="techIcons javascript" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='javascript' src="./images/js.png" alt="" /></div>
+                    <div className="techIcons nodejs" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='nodejs' src="./images/nodejs.png" alt="" /></div>
+                    <div className="techIcons express" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='express' src="./images/express.png" alt="" /></div>
                 </div>
                 <div className="row" style={{display: 'flex', flexDirection: 'row'}}>
-                    <div className="techIcons react" onMouseOver={(e)=>{setHover(e)}}><img className='react' src="./images/react.png" alt="" /></div>
-                    <div className="techIcons mongodb" onMouseOver={(e)=>{setHover(e)}}><img className='mongodb' src="./images/mongodb.png" alt="" /></div>
-                    <div className="techIcons tailwind" onMouseOver={(e)=>{setHover(e)}}><img className='tailwind' src="./images/tailwind-css.png" alt="" /></div>
-                    <div className="techIcons bootstrap" onMouseOver={(e)=>{setHover(e)}}><img className='bootstrap' src="./images/bootstrap-5-logo-icon.png" alt="" /></div>
-                    <div className="techIcons python" onMouseOver={(e)=>{setHover(e)}}><img className='python' src="./images/python.png" alt="" /></div>
+                    <div className="techIcons react" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='react' src="./images/react.png" alt="" /></div>
+                    <div className="techIcons mongodb" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='mongodb' src="./images/mongodb.png" alt="" /></div>
+                    <div className="techIcons tailwind" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='tailwind' src="./images/tailwind-css.png" alt="" /></div>
+                    <div className="techIcons bootstrap" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='bootstrap' src="./images/bootstrap-5-logo-icon.png" alt="" /></div>
+                    <div className="techIcons python" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='python' src="./images/python.png" alt="" /></div>
                 </div>
             </div>
         </div>
