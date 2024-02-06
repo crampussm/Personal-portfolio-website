@@ -61,6 +61,9 @@ function About() {
             <h2>SWAPARUP MUKHERJEE</h2>
             <p style={{ fontSize: "1rem" }}><b>B.Tech</b> undergrad at <b>NIT Agartala</b></p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quibusdam neque suscipit doloribus laborum quisquam ratione animi aut dolores quos.</p>
+            <form method='get' action="swaparup_mukherjee_resume.pdf">
+              <button className="button">Download Resume</button>
+            </form>
           </div>
           <div className="about-mypic">
 
