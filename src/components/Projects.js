@@ -19,7 +19,7 @@ function Projects() {
         <div className="project-showcase">
             <div className="project-info" style={{maxWidth: "498px"}} id='price-tracker-bot-pc-info'>
                 <h2 style={{fontSize: "2rem", color: "#50C594", margin: "4px 0px"}}>pricetracker Bot</h2>
-                <p className='text' style={{margin: "90px 0px"}}>Lorem lorem20 ipsum dolor sit, amet consectetur adipisicing elit. Quisquam neque voluptatum, autem minus explicabo maiores voluptatibus amet ipsa facere rem adipisci quaerat quibusdam, illum accusantium dolorum repellendus dicta! Ipsa, adipisci!</p>
+                <p className='text' style={{margin: "40px 0px"}}>Explore my portfolio crafted with React JS, showcasing my web development expertise. Discover my skills, browse through projects, and witness a fusion of creativity and functionality in every line of code.</p>
                 <div style={{backgroundColor: "#8EA0BA", height: "1px", width: "100%", marginTop: "150px"}}></div>
                 <p className='text' style={{margin: "15px 0px"}}>Python</p>
             </div>
@@ -29,7 +29,7 @@ function Projects() {
             </div>
             <div className="project-info" id='price-tracker-bot-mobile-info'>
                 <h2 style={{fontSize: "2rem", color: "#50C594", margin: "4px 0px"}}>pricetracker Bot</h2>
-                <p className='text' style={{margin: "35px 0px"}}>Lorem lorem20 ipsum dolor sit, amet consectetur adipisicing elit. Quisquam neque voluptatum, autem minus explicabo maiores voluptatibus amet ipsa facere rem adipisci quaerat quibusdam, illum accusantium dolorum repellendus dicta! Ipsa, adipisci!</p>
+                <p className='text' style={{margin: "90px 0px"}}>Introducing my Python-powered Telegram Price Tracker Bot, revolutionizing online shopping. Leveraging web scraping, it empowers buyers with real-time insights, ensuring informed decisions on optimal purchases. Your guide to buying right, every time.</p>
                 <div style={{backgroundColor: "#8EA0BA", height: "1px", width: "100%"}}></div>
                 <p className='text' style={{margin: "15px 0px"}}>Python</p>
             </div>
