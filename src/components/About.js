@@ -60,7 +60,7 @@ function About() {
           <div className="about-info">
             <h2>SWAPARUP MUKHERJEE</h2>
             <p style={{ fontSize: "1rem" }}><b>B.Tech</b> undergrad at <b>NIT Agartala</b></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quibusdam neque suscipit doloribus laborum quisquam ratione animi aut dolores quos.</p>
+            <p>I'm a tech and coding enthusiast. I started coding at the of 16 and still learning atleast one new thing everyday. I'm very sincere and dedicated towards my work. Take a look at my projects on github. I'm planning to add more projects on some innovative ideas.</p>
             <form method='get' action="swaparup_mukherjee_resume.pdf">
               <button className="button">Download Resume</button>
             </form>
