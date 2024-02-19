@@ -6,7 +6,7 @@ function Projects() {
         <h1 className='heading' id='project-heading'>PROJECTS</h1>
         <div className="project-showcase">
             <div className="project-image">
-                <img src="./images/ppw.png" alt="" width={"100%"} style={{cursor: "pointer"}}/>
+                <a href="https://github.com/crampussm/swaparup_mukherjee"><img src="./images/ppw.png" alt="" width={"100%"} style={{cursor: "pointer"}}/></a>
             </div>
             <div  className="divider"></div>
             <div className="project-info">
@@ -25,7 +25,7 @@ function Projects() {
             </div>
             <div  className="divider" style={{height: "450px"}}></div>
             <div className="project-image">
-                <img src="./images/priceTracker_bot.png" alt="" width={"100%"} style={{cursor: "pointer"}}/>
+                <a href="https://github.com/crampussm/price_tracker_bot"><img src="./images/priceTracker_bot.png" alt="" width={"100%"} style={{cursor: "pointer"}}/></a>
             </div>
             <div className="project-info" id='price-tracker-bot-mobile-info'>
                 <h2 style={{fontSize: "2rem", color: "#50C594", margin: "4px 0px"}}>pricetracker Bot</h2>
