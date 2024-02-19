@@ -19,7 +19,7 @@ function Projects() {
         <div className="project-showcase">
             <div className="project-info" style={{maxWidth: "498px"}} id='price-tracker-bot-pc-info'>
                 <h2 style={{fontSize: "2rem", color: "#50C594", margin: "4px 0px"}}>pricetracker Bot</h2>
-                <p className='text' style={{margin: "40px 0px"}}>ntroducing my Python-powered Telegram Price Tracker Bot, revolutionizing online shopping. Leveraging web scraping, it empowers buyers with real-time insights, ensuring informed decisions on optimal purchases. Your guide to buying right, every time</p>
+                <p className='text' style={{margin: "40px 0px"}}>Introducing my Python-powered Telegram Price Tracker Bot, revolutionizing online shopping. Leveraging web scraping, it empowers buyers with real-time insights, ensuring informed decisions on optimal purchases. Your guide to buying right, every time</p>
                 <div style={{backgroundColor: "#8EA0BA", height: "1px", width: "100%", marginTop: "150px"}}></div>
                 <p className='text' style={{margin: "15px 0px"}}>Python</p>
             </div>
