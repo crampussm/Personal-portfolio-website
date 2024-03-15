@@ -1,105 +1,68 @@
 import React, { useState } from 'react'
 
 function Skills(props) {
-    const [hoveredElement, setHoveredElement] = useState('')
-    const [skillEfficiency, setSkillEfficiency] = useState('')
-    const [skillSpec, setSkillSpec] = useState("¯\\_(ツ)_/¯")
+    const [hoveredElement, setHoveredElement] = useState('');
+    const [skillEfficiency, setSkillEfficiency] = useState('');
+    const [skillSpec, setSkillSpec] = useState("¯\\_(ツ)_/¯");
+    const [imgsrc, setImgsrc] = useState("./images/empty_stat.png");
+    const [mobilename, setMobileName] = useState();
+
     const setHover = (e)=>{
-        let name = e.target.className.split(" ").slice(-1)[0]
-        let efficiency = {
-            "html": "90%",
-            "css": "70%",
-            "javascript": "85%",
-            "nodejs": "75%",
-            "express": "80%",
-            "react": "60%",
-            "mongodb": "85%",
-            "tailwind": "70%",
-            "bootstrap": "90%",
-            "python": "60%"
+        console.log("hover");
+        let prevName = '';
+        if(e.target.id!==prevName){
+            let name = e.target.id;
+            prevName = name;
+            setImgsrc(`./images/${name}_stat.png`);
         }
-        let offsetValue = {
-            "html": "340",
-            "css": "360",
-            "javascript": "345",
-            "nodejs": "355",
-            "express": "350",
-            "react": "370",
-            "mongodb": "345",
-            "tailwind": "360",
-            "bootstrap": "340",
-            "python": "370"
-        }
-        let specification = {
-            "html": "EXPERT",
-            "css": "INTERMEDIATE",
-            "javascript": "EXPERIENCED",
-            "nodejs": "INTERMEDIATE",
-            "express": "EXPERIENCED",
-            "react": "INTERMEDIATE",
-            "mongodb": "EXPERIENCED",
-            "tailwind": "INTERMEDIATE",
-            "bootstrap": "EXPERT",
-            "python": "INTERMEDIATE"
-        }
-        setSkillSpec(specification[name])
-        setSkillEfficiency(efficiency[name])
-        setHoveredElement(name)
-        document.documentElement.style.setProperty("--offset-value", offsetValue[name]); 
     }
+
+    const handleClick = (e)=>{
+        e.preventDefault();
+        console.log(e.target.className.split(" ")[0])
+        console.log(e.target.name);
+        setImgsrc(`./images/${e.target.className.split(" ")[0]}_stat.png`);
+    }
+
   return (
-    <div className='skills' id='skills'>
-        <div className={`${props.sticky?"skillItems-with-fixed":"skillItems"}`}>
-            <h1 className='heading'>SKILLS</h1>
-            <div className="technologies">
-                <div className="row" style={{display: 'flex', flexDirection: 'row'}}>
-                    <div className="techIcons html" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='html' src="./images/html-5.png" alt="" /></div>
-                    <div className="techIcons css" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='css' src="./images/css-3.png" alt="" /></div>
-                    <div className="techIcons javascript" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='javascript' src="./images/js.png" alt="" /></div>
-                    <div className="techIcons nodejs" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='nodejs' src="./images/nodejs.png" alt="" /></div>
-                    <div className="techIcons express" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='express' src="./images/express.png" alt="" /></div>
+    <div className='skills mx-8 mt-16 flex flex-col md:flex-row justify-center' id='skills'>
+        <div className={`${props.sticky?"md:my-[200px] my-8":"md:my-[102px] my-8"} md:w-[95%]`}>
+            <h1 className='heading font-bold my-5'>SKILLS</h1>
+            <div className="technologies hidden md:flex flex-col w-full md:max-w-[750px] p-4 rounded-lg items-center">
+                <div className="row flex justify-between md:w-[90%] my-4 md:my-8">
+                    <div id='html' className="techIcons html bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='html md:w-[70%]' src="./images/html-5.png" alt="" /></div>
+                    <div id = "css" className="techIcons css bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='css md:w-[70%]' src="./images/css-3.png" alt="" /></div>
+                    <div id ="javascript" className="techIcons javascript bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='javascript md:w-[70%]' src="./images/js.png" alt="" /></div>
+                    <div id ="nodejs" className="techIcons nodejs bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='nodejs md:w-[70%]' src="./images/nodejs.png" alt="" /></div>
+                    <div id ="express" className="techIcons express bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='express md:w-[70%]' src="./images/express.png" alt="" /></div>
                 </div>
-                <div className="row" style={{display: 'flex', flexDirection: 'row'}}>
-                    <div className="techIcons react" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='react' src="./images/react.png" alt="" /></div>
-                    <div className="techIcons mongodb" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='mongodb' src="./images/mongodb.png" alt="" /></div>
-                    <div className="techIcons tailwind" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='tailwind' src="./images/tailwind-css.png" alt="" /></div>
-                    <div className="techIcons bootstrap" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='bootstrap' src="./images/bootstrap-5-logo-icon.png" alt="" /></div>
-                    <div className="techIcons python" onMouseOver={(e)=>{setHover(e)}} onClick={(e)=>{setHover(e)}}><img className='python' src="./images/python.png" alt="" /></div>
+                <div className="row flex justify-between md:w-[90%] my-4 md:my-8">
+                    <div id ="react" className="techIcons react bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='react md:w-[70%]' src="./images/react.png" alt="" /></div>
+                    <div id ="mongodb" className="techIcons mongodb bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='mongodb md:w-[70%]' src="./images/mongodb.png" alt="" /></div>
+                    <div id ="tailwind" className="techIcons tailwind bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='tailwind md:w-[70%]' src="./images/tailwind-css.png" alt="" /></div>
+                    <div id ="bootstrap" className="techIcons bootstrap bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='bootstrap md:w-[70%]' src="./images/bootstrap-5-logo-icon.png" alt="" /></div>
+                    <div id ="python" className="techIcons python bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onMouseOver={setHover}><img className='python md:w-[70%]' src="./images/python.png" alt="" /></div>
+                </div>
+            </div>
+            <div className="technologies md:hidden flex flex-col w-full md:max-w-[750px] p-4 rounded-lg items-center">
+                <div className="row flex justify-between md:w-[90%] my-4 md:my-8">
+                    <div id='html-mobile' className="html bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='html md:w-[70%]' src="./images/html-5.png" alt="" /></div>
+                    <div id = "css-mobile" className="css bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='css md:w-[70%]' src="./images/css-3.png" alt="" /></div>
+                    <div id ="javascript-mobile" className="javascript bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='javascript md:w-[70%]' src="./images/js.png" alt="" /></div>
+                    <div id ="nodejs-mobile" className="nodejs bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='nodejs md:w-[70%]' src="./images/nodejs.png" alt="" /></div>
+                    <div id ="express-mobile" className="express bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='express md:w-[70%]' src="./images/express.png" alt="" /></div>
+                </div>
+                <div className="row flex justify-between md:w-[90%] my-4 md:my-8">
+                    <div id ="react-mobile" className="react bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='react md:w-[70%]' src="./images/react.png" alt="" /></div>
+                    <div id ="mongodb-mobile" className="mongodb bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='mongodb md:w-[70%]' src="./images/mongodb.png" alt="" /></div>
+                    <div id ="tailwind-mobile" className="tailwind bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='tailwind md:w-[70%]' src="./images/tailwind-css.png" alt="" /></div>
+                    <div id ="bootstrap-mobile" className="bootstrap bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='bootstrap md:w-[70%]' src="./images/bootstrap-5-logo-icon.png" alt="" /></div>
+                    <div id ="python-mobile" className="python bg-gray-300 rounded-lg flex justify-center items-center mx-1 md:mx-6 px-2 py-2 md:py-4 cursor-pointer hover:scale-125 ease-in duration-200" onClick={handleClick}><img className='python md:w-[70%]' src="./images/python.png" alt="" /></div>
                 </div>
             </div>
         </div>
-        <div className={`${props.sticky?"info-with-fixed":"info"}`}>
-            <div className="show-stat">
-                $~Hover any skill to see stats<span class="blinking-cursor">|</span>
-                <div className="stats">
-                    <div style={{display: 'flex'}}>
-                        <h5 style={{fontSize: "0.8rem", marginTop: 5}}>【/】{hoveredElement.toUpperCase()}</h5>
-                    </div>
-                    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-                        <h5 style={{fontSize: "0.85rem", margin: "-10px 2px", maxWidth: "90px"}}>
-                            <div>❰/❱❰/❱❰/❱❰/❱</div>
-                            {skillSpec}
-                        </h5>
-                        <div className="progress-cirle">
-                            <div className="outer">
-                                <div className="inner">
-                                    <h5 style={{fontSize: "0.85rem", marginLeft: "10px"}}>{skillEfficiency}</h5>
-                                </div>
-                            </div>
-                            <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width={"50px"} height={"50px"}>
-                                <defs>
-                                    <linearGradient id='Gradientcolor'>
-                                        <stop offset={"0%"} stopColor='#009a5a'/>
-                                        <stop offset={"100%"} stopColor='#5fffbc'/>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx={24.6} cy={24.6} r={21} strokeLinecap='round'/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img className='man-inf-pc' src="./images/man_inf_of_pc.png" alt=""/>
+        <div className={`${props.sticky?"md:my-[160px]":""} md:w-[700px]`}>
+            <img id='man-inf-pc' className='man-inf-pc scale-125 md:scale-125' src={imgsrc} alt=""/>
         </div>
     </div>
   )

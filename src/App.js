@@ -48,7 +48,6 @@ function App() {
         <Projects/>
         <About/>
         <Footer/>
-        {window.innerWidth<=1104} && <HambergerNavbar manageHamNav={manageHamNav}/>
       </PropertiesState>
     </>
   );

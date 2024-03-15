@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/styles.css */
+body{
+    background: #0F172A;
+    overflow-x: hidden;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar{
+    width: 5px;
 }
+::-webkit-scrollbar-track{
+    background-color: #0f172a84;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #00ff951b;
+    border-radius: 5px;
+}
+.active{
+    border-bottom: 3px solid #50C594;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em #50C594;
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em #50C594;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #50C594;
+}
+.navbarItems:hover{
+    color: #50C594;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em #50C594;
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em #50C594;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #50C594;
+}
+.navbarItems div{
+    height: 2px;
+    width: 0%;
+    border: 0;
+    margin: 4px 0px;
+    transition: width 0.5s;
+}
+.navbarItems:hover div{
+    background: #50C594;
+    width: 85%;
+}
+.heading{
+  font-size: 3rem;
+  color: #50C594;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+  0 0 0.45em #50C594;
+-moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+  0 0 0.45em #50C594;
+text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #50C594;
+}
+.technologies{
+  content: "";
+  background-image: url("../public/images/grid.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: -1;
+  filter: drop-shadow(10px);
+}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

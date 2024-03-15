@@ -174,7 +174,7 @@ a{
     margin: 43px 62px;
 }
 .navbarItems div{
-    height: 3px;
+    height: 2px;
     width: 0%;
     border: 0;
     margin: 4px 0px;
@@ -182,6 +182,7 @@ a{
 }
 .navbarItems:hover div{
     background: #50C594;
+    height: 2px;
     width: 85%;
 }
 .active{

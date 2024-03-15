@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 function Navbar(props) {
@@ -6,11 +6,11 @@ function Navbar(props) {
     // console.log(props.region)
     const interval = setInterval(()=>{
       // console.log(props.projectsTop)
-      if(window.scrollY < props.skillsTop-100){
+      if(window.scrollY < props.skillsTop-200){
         props.setRegion('#home')
         document.title = "Swaparup Mukherjee - Home"
         props.setSticky(false)
-      }else if(window.scrollY >= props.skillsTop-100 && window.scrollY < props.projectsTop-110){
+      }else if(window.scrollY >= props.skillsTop-200 && window.scrollY < props.projectsTop-110){
         props.setRegion('#skills')
         document.title = "Swaparup Mukherjee - Skills"
         props.setSticky(true)
@@ -30,28 +30,28 @@ function Navbar(props) {
     return () => clearInterval(interval);
   })
   return (
-    <nav id='navbar' className={`navbar ${props.sticky?"fixed":""}`} style={{justifyContent: "center"}}>
-        <ul style={{display: "flex", margin: "25px 4px"}}>
-            <li style={{padding: "3px 120px"}}>
-              <Link smooth className={`navbarItems ${props.region ==='#home'?'active':''}`} name="home" to="#home" >
+    <nav id='navbar' className={`navbar hidden md:flex ${props.sticky?"fixed top-0":""} justify-center items-center w-full h-[100px]`}>
+        <ul className='flex justify-between w-[60%]'>
+            <li className=''>
+              <Link smooth className={`navbarItems ${props.region ==='#home'?'active text-color3':''} text-color2 font-semibold text-lg`} name="home" to="#home" >
                 Home
                 <div className='underlinehover'></div>
               </Link>
             </li>
-            <li style={{padding: "3px 120px"}}>
-              <Link smooth className={`navbarItems ${props.region ==='#skills'?'active':''}`} name="skills" to="#skills">
+            <li className=''>
+              <Link smooth className={`navbarItems ${props.region ==='#skills'?'active text-color3':''} text-color2 font-semibold text-lg`} name="skills" to="#skills">
                 Skills
                 <div className='underlinehover'></div>
               </Link>
             </li>
-            <li style={{padding: "3px 120px"}}>
-              <Link smooth className={`navbarItems ${props.region ==='#projects'?'active':''}`} name="projects" to="#projects">
+            <li className=''>
+              <Link smooth className={`navbarItems ${props.region ==='#projects'?'active text-color3':''} text-color2 font-semibold text-lg`} name="projects" to="#projects">
                 Projects
                 <div className='underlinehover'></div>
               </Link>
             </li>
-            <li style={{padding: "3px 120px"}}>
-              <Link smooth className={`navbarItems ${props.region ==='#about'?'active':''}`} name="about" to="#about">
+            <li className=''>
+              <Link smooth className={`navbarItems ${props.region ==='#about'?'active text-color3':''} text-color2 font-semibold text-lg`} name="about" to="#about">
                 About
                 <div className='underlinehover'></div>
               </Link>
