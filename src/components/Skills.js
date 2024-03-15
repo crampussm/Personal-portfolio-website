@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 
 function Skills(props) {
-    const [hoveredElement, setHoveredElement] = useState('');
-    const [skillEfficiency, setSkillEfficiency] = useState('');
-    const [skillSpec, setSkillSpec] = useState("¯\\_(ツ)_/¯");
+
     const [imgsrc, setImgsrc] = useState("./images/empty_stat.png");
-    const [mobilename, setMobileName] = useState();
 
     const setHover = (e)=>{
         console.log("hover");
